@@ -14,7 +14,7 @@
 - [Dockernize and run Gallery3 App on the VM](https://github.com/rioriost/kd_gallery3/)
 
 ### 3. Azure Database for MySQL/PostgreSQL
-- [Create Azure Database for MySQL account and configure](module3/setup-azure-db-for-mysql.md)
+- [Create Azure Database for MySQL account and configure](module3/setup-azdb4mysql.md)
 - [Configure the App to connect to Azure Database for MySQL]()
 
 ### 4. Kubernates/Helm
