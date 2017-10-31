@@ -1,11 +1,12 @@
 #!/bin/bash
 
-readonly LOCATION="japaneast"
+readonly LOCATION="westus2"
 readonly PREFIX="rio"
 # ACR name must be lower case
 readonly AZURE_CONTAINER_REGISTRY_NAME="${PREFIX}acr"
 readonly MY_RESOURCE_GROUP="${PREFIX}ResourceGroup"
 readonly SERVICE_PLAN="${PREFIX}ServicePlan"
+readonly AKS_NAME="${PREFIX}cluster"
 
 readonly GITHUB_URL="https://github.com"
 readonly GITHUB_ID="rioriost"
@@ -19,9 +20,13 @@ readonly MYSQL_NAME="${PREFIX}mysql"
 readonly MYSQL_USER=${PREFIX}
 readonly MYSQL_PASSWORD="cn7a#a-1"
 
+create_Group () {
+	echo "Creating Resource Group..."
+	az group create --location $LOCATION --name $MY_RESOURCE_GROUP
+}
+
 create_ACR () {
 	echo  "Creating Azure Container Registry..."
-	az group create --location $LOCATION --name $MY_RESOURCE_GROUP
 	az acr create --name $AZURE_CONTAINER_REGISTRY_NAME --resource-group $MY_RESOURCE_GROUP --sku Basic --admin-enabled true
 	readonly AZURE_CONTAINER_REGISTRY_PASSWORD=`az acr credential show --name $AZURE_CONTAINER_REGISTRY_NAME | grep "value" | head -1 | cut -d '"' -f 4`
 }
@@ -50,6 +55,33 @@ create_WebApp () {
 		 -p $AZURE_CONTAINER_REGISTRY_PASSWORD
 }
 
+create_AKS (){
+	echo  "Creating Azure Container Service..."
+	az provider register -n Microsoft.ContainerService
+	az aks create --name $AKS_NAME --resource-group $MY_RESOURCE_GROUP
+	az aks install-cli
+	cat << EOS > $DOCKER_IMAGE.yml
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: my-gallery
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: my-gallery
+    spec:
+      containers:
+      - name: my-gallery
+        image: $AZURE_CONTAINER_REGISTRY_NAME.azurecr.io/$DOCKER_IMAGE
+        ports:
+        - containerPort: 80
+EOS
+	kubectl create -f $DOCKER_IMAGE.yml
+	az aks get-credentials -n $AKS_NAME -g $MY_RESOURCE_GROUP
+}
+
 create_MySQL () {
 	echo "Creating Azure DB for MySQL..."
 	az mysql server create -g $MY_RESOURCE_GROUP --name $MYSQL_NAME --location $LOCATION -u $MYSQL_USER -p $MYSQL_PASSWORD --performance-tier Basic --compute-units 50
@@ -57,11 +89,14 @@ create_MySQL () {
 	az mysql server update -g $MY_RESOURCE_GROUP -n $MYSQL_NAME --ssl-enforcement Disabled
 }
 
+create_Group
+
 create_ACR
 
 build_docker_image
 
 create_WebApp
+#create_AKS
 
 create_MySQL
 echo "Connection String is ${PREFIX}@${MYSQL_NAME}@${MYSQL_NAME}.mysql.database.azure.com with Password '${MYSQL_PASSWORD}'"
