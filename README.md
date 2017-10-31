@@ -13,7 +13,7 @@
   ![](module1/img/arch_after.png)
 
 - Prerequisites
-  - Linux VM & Azure CLI§: [Create an Azure Linux VM for container app developement](module1/deploy-linuxvm.md)
+  - Linux VM & Azure CLI: [Create an Azure Linux VM for container app developement](module1/deploy-linuxvm.md)
   - Docker: [Install Docker using Azure Extensions](module1/azdockerinstall.md)
 
 ### 2. Dockernize Gallery 3 Application
