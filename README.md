@@ -4,7 +4,8 @@
 ## Table of Contents
 ### 1. Intro and Prerequisites
 - About Gallery 3:
-  - Gallery 3 is an open source photo sharing web application, based on PHP and MySQL.
+  - [Gallery 3](http://galleryproject.org/) is an open source photo sharing web application, based on PHP and MySQL.
+  - [Gallery 3 Github Repo](https://github.com/gallery/gallery3)
 - Architecture (before/after)
   - before
   ![](module1/img/arch_before.png)
