@@ -3,9 +3,9 @@
 To be completeed. We have the docker image.. challege yourself and get this working in K8 or even on AKS!
 
 ## Manifests 'kinds' in K8s
-Pods
-ReplicationController - This is now going to be replaced by Deployments (Currently in Beta. Change apiVersion beta/v1)
-Service
+- Pods
+- ReplicationController. This is now going to be replaced by Deployments (Currently in Beta. Change apiVersion beta/v1)
+- Service
 
 ## example pod.yml file
 ```
