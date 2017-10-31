@@ -27,7 +27,7 @@
 - [Deploy Gallery3 App Container on k8s/helm](module4/deploy-app-to-k8s.md)
 
 ### 5. Azure AD B2C
-- [Azure AD B2C Setup](module5/setup-azadb2c.md)
+- [Azure AD B2C Setup](module5/azadb2c-setup.md)
 - [Extends Gallery3 authentication with Azure AD B2C](https://github.com/yokawasa/gallery3-openid-azureadb2c-module)
 
 ### 6. Xamarin 
