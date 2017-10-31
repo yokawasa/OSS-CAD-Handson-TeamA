@@ -17,10 +17,10 @@ Register your Gallery3 application in your Azure AD B2C directory. Here is an in
 
 Please configure either Microsoft account, Facebook, or both as identity providers in your tenant
 - Microsoft Account (only if you want to configure Mcrosoft account)
-  - Please configure this by following instruction: [Azure Active Directory B2C: Provide sign-up and sign-in to consumers with Microsoft accounts](https://docs.microsoft.com/ja-jp/azure/active-directory-b2c/active-directory-b2c-setup-msa-app)
+  - Please configure this by following instruction: [Azure Active Directory B2C: Provide sign-up and sign-in to consumers with Microsoft accounts](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-msa-app)
 
 - Facebook Account (only if you want to configure Facebook account)
-  - Please configure this by following instruction: [Azure Active Directory B2C: Provide sign-up and sign-in to consumers with Facebook accounts](https://docs.microsoft.com/ja-jp/azure/active-directory-b2c/active-directory-b2c-setup-fb-app)
+  - Please configure this by following instruction: [Azure Active Directory B2C: Provide sign-up and sign-in to consumers with Facebook accounts](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-setup-fb-app)
 
 ## Create sign-in/sing-out policy
 
