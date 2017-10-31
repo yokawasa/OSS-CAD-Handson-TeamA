@@ -17,3 +17,6 @@ On your Android device, navigate to [Gallery3 Android release](https://install.
 # 3. To connect the app to your Gallery3 instance:
 
 Open the app on your Android device.  By default the app will attempt to access my Gallery3 instance at [http://hectagongallerydocker.azurewebsites.net](http://hectagongallerydocker.azurewebsites.net).  You can change this by tapping the button near the bottom of the screen with the URL on it.  This will open the settings page of the app where you can enter your own Gallery3 URL endpoint.
+
+# LINKS
+- [Github Repo: A Xamarin mobile app for iOS and Android to front the Gallery3 PHP photos app](https://github.com/nickward13/Gallery3App)
