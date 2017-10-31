@@ -7,10 +7,10 @@ Here is how to create Azure Database for MySQL account from Azure CLI:
  az mysql server create --name <your account name> \
    --resource-group <your reousrce group> \
    --location japanwest \
-　 --admin-user yoichika --admin-password *** \
+　 --admin-user <admin user name> --admin-password *** \
    --performance-tier Basic --compute-units 50
 ```
-(Service Tier: Basic, Region: Japan West, Adminuser: yoichika, Compute Units:50 )
+(Service Tier: Basic, Region: Japan West, Compute Units:50 )
 
 Once the account creation is completed, you'll have the following the server name for the account:
 <youraccoutname>.mysql.database.azure.com
@@ -28,6 +28,13 @@ az mysql server firewall-rule create --resource-group <your resource group> \
 ```
  az mysql server update --resource-group <your resource group> \
    --name <your account name> --ssl-enforcement Disabled
+```
+
+## Check the access
+
+Check the access to mysql with mysql client command like this:
+```
+ mysql -u <admin-user-name>@<account-name> -p -h <accout-name>.mysql.database.azure.com
 ```
 
 ## LINKS
