@@ -1,6 +1,6 @@
 # k8s on ACS Setup
 
-## Note: prefix your resource gorup with your user id to keep unique.
+### Note: prefix your resource gorup with your user id to keep unique.
 
 1. Create K8 resource group on ACS
 
