@@ -24,7 +24,7 @@
 - [Configure the App to connect to Azure Database for MySQL](module3/configure-app-for-azdb4mysql.md)
 
 ### 4. Kubernates on ACS
-- [k8s on ACS Setup](module4/setup-k8s.md)
+- [k8s on ACS Setup](module4/k8s-setup.md)
 - [Deploy Gallery3 App Container on k8s](module4/deploy-app-to-k8s.md)
 
 ### 5. Azure AD B2C
