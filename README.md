@@ -12,7 +12,7 @@
   - after
   ![](module1/img/arch_after.png)
 
-- Prerequisites
+- Optional precedure (only for the one who don't have an enviroment where you can run docker / docker-compose command to build docker images) 
   - Linux VM & Azure CLI: [Create an Azure Linux VM for container app developement](module1/deploy-linuxvm.md)
   - Docker: [Install Docker using Azure Extensions](module1/azdockerinstall.md)
 
