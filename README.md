@@ -17,7 +17,7 @@
   - Docker: [Install Docker using Azure Extensions](module1/azdockerinstall.md)
 
 ### 2. Dockernize Gallery 3 Application
-- [Dockernize and run Gallery3 App on the VM](https://github.com/rioriost/kd_gallery3/)
+- [Dockernize and run Gallery3 App on the VM](module2/dockernize-run-app-on-vm.md)
 
 ### 3. Azure Database for MySQL/PostgreSQL
 - [Create Azure Database for MySQL account and configure](module3/setup-azdb4mysql.md)
