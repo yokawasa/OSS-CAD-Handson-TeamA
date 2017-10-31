@@ -28,7 +28,7 @@ create_Group () {
 create_ACR () {
 	echo  "Creating Azure Container Registry..."
 	az acr create --name $AZURE_CONTAINER_REGISTRY_NAME --resource-group $MY_RESOURCE_GROUP --sku Basic --admin-enabled true
-	readonly AZURE_CONTAINER_REGISTRY_PASSWORD=`az acr credential show --name $AZURE_CONTAINER_REGISTRY_NAME | grep "value" | head -1 | cut -d '"' -f 4`
+	readonly AZURE_CONTAINER_REGISTRY_PASSWORD=`az acr credential show --output json --name $AZURE_CONTAINER_REGISTRY_NAME | grep "value" | head -1 | cut -d '"' -f 4`
 }
 
 build_docker_image () {

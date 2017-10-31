@@ -15,6 +15,10 @@ Here is how to create Azure Database for MySQL account from Azure CLI:
 Once the account creation is completed, you'll have the following the server name for the account:
 <youraccoutname>.mysql.database.azure.com
 
+[note] Currently Azure DB for MySQL/PostgresSQL are only available in the following 16 regions: 
+- **West US, North Central US, East US, East US2, South Central US, West Europe, North Europe, Japan West, Japan East, East Asia, SE Asia, India West, India Central, Canada Central, Canada East, Brazil**
+
+
 ## Configure
 
 - Firewall (allow full IP range for testing）
