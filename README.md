@@ -32,8 +32,8 @@
 - [Extends Gallery3 authentication with Azure AD B2C](https://github.com/yokawasa/gallery3-openid-azureadb2c-module)
 
 ### 6. Xamarin 
-- [Xamarin.Forms Gallery3 client app]()
-- [Azure Mobile Center]()
+- [Xamarin.Forms Gallery3 client app](module6/xamarin-Forms-client-app.md)
+- [Azure Mobile Center](module6/mobile-center.md)
 
 
 
