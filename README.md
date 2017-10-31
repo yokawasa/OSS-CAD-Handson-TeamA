@@ -22,7 +22,6 @@
 ### 3. Azure Database for MySQL/PostgreSQL
 - [Create Azure Database for MySQL account and configure](module3/setup-azdb4mysql.md)
 - [Configure the App to connect to Azure Database for MySQL](module3/configure-app-for-azdb4mysql.md)
-  ![](module3/mysql_conneciton_string.png)
 
 ### 4. Kubernates on ACS
 - [k8s on ACS Setup](module4/k8s-setup.md)
