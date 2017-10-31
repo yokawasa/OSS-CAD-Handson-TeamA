@@ -22,5 +22,5 @@ you'll see the page below when you access to http://localhost:8080 initially.
 
 Then, you need to pass the parametars to connect gallery3 to MySQL such as User, password, Hostname and port number (if needed) in installation page. if the installation complete successfully, you'll see the page like below (Don't forget to take a note of admin user and password shown on the page):
 
-![](module2/img/gallery3-init.png)
+![](module2/img/gallery3-init-success.png)
 
