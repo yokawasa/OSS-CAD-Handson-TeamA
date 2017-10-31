@@ -18,9 +18,9 @@ Once you run container from kd_gallery3 image, access to http://localhost:8080
 
 you'll see the page below when you access to http://localhost:8080 initially.
 
-![](module2/img/gallery3-init.png)
+![](img/gallery3-init.png)
 
 Then, you need to pass the parametars to connect gallery3 to MySQL such as User, password, Hostname and port number (if needed) in installation page. if the installation complete successfully, you'll see the page like below (Don't forget to take a note of admin user and password shown on the page):
 
-![](module2/img/gallery3-init-success.png)
+![](img/gallery3-init-success.png)
 
