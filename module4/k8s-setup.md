@@ -10,7 +10,7 @@
 
 ```
 $ az acs create --orchestrator-type=kubernetes \
---resource-group=gallery30-rg --name=gallery3-cluster --generate-ssh-keys
+--resource-group=gallery3-rg --name=gallery3-cluster --generate-ssh-keys
 ```
 
 3. Once this cluser is created, you can get credentials for the cluster with:
